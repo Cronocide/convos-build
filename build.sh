@@ -192,6 +192,9 @@ BUILD_PREFIX="cicd"
 [[ "$ACTION" != "$BUILD_PREFIX"* ]] && error "Action $ACTION is not recognized as a valid action."
 __no_req "$ACTION" && error "Action $ACTION is not recognized as a valid action." && exit 1
 
+# Clone repo and cd
+git clone "https://github.com/convos-chat/convos.git" && cd "convos"
+
 # Fill in variables if not supplied by CICD
 [ -z "$USERN" ] && export USERN=cronocide
 [ -z "$GIT_REPO_NAME" ] && export GIT_REPO_NAME=git.cronocide.net

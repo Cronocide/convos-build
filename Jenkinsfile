@@ -16,7 +16,7 @@ pipeline {
 	}
 	environment {
 		WORKSPACE_PATH = "/opt/nomad/alloc/${NOMAD_ALLOC_ID}/${NOMAD_TASK_NAME}${WORKSPACE}"
-		DESCRIPTION = "Another amazing piece of software written by Cronocide."
+		DESCRIPTION = "Because the convos team can't be bothered with CPU compatibility for their releases."
 	}
 	triggers { cron('H 3 * * 1') }
 	stages {
