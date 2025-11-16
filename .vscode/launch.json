@@ -1,0 +1,35 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/${workspaceFolderBasename}",
+			"console": "integratedTerminal",
+			"justMyCode": true,
+			"preLaunchTask": "make_envfile",
+			"postDebugTask": "destroy_envfile"
+		},
+		{
+			"name": "Info",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/${workspaceFolderBasename}",
+			"console": "integratedTerminal",
+			"justMyCode": true,
+			"preLaunchTask": "make_envfile",
+			"postDebugTask": "destroy_envfile"
+		},
+		{
+			"name": "Warning",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/${workspaceFolderBasename}",
+			"console": "integratedTerminal",
+			"justMyCode": true,
+			"preLaunchTask": "make_envfile",
+			"postDebugTask": "destroy_envfile"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "make_envfile",
+			"type": "shell",
+			"command": ".vscode/env.sh",
+			"args": ["qualtrics","${workspaceFolderBasename}"]
+		},
+		{
+			"label": "destroy_envfile",
+			"type": "shell",
+			"command": "rm",
+			"args": [".env"],
+			"presentation": {
+				"reveal": "never"
+			}
+		}
+	]
+}
