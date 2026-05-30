@@ -197,6 +197,9 @@ cd ../
 [ ! -d "convos" ] && git clone "https://github.com/convos-chat/convos.git" && cd "convos"
 [ -d "convos" ] && cd convos
 
+# Patch PNPM because of missing package allowances that I'm too lazy to make
+sed -i 's#frozen-lockfile#frozen-lockfile --dangerously-allow-all-builds#' Dockerfile
+
 # Fill in variables if not supplied by CICD
 [ -z "$USERN" ] && export USERN=cronocide
 [ -z "$GIT_REPO_NAME" ] && export GIT_REPO_NAME=git.cronocide.net
